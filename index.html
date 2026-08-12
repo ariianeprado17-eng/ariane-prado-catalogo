@@ -819,44 +819,48 @@
 
   function sendWhatsApp() {
 
-  if (cart.length === 0) {
-    alert("Adicione pelo menos um produto ao carrinho. ❤️");
-    return;
-  }
+    if (cart.length === 0) {
 
-  let message =
-    "Olá, Ariane! Gostaria de fazer este pedido:\n\n";
+      alert("Adicione pelo menos um produto ao carrinho.");
 
-  let total = 0;
+      return;
 
-  cart.forEach(item => {
+    }
 
-    const price =
-      item.precoPromocional &&
-      item.precoPromocional < item.precoCheio
+    let message =
+  "🛍️ *Olá, Ariane! Gostaria de fazer este pedido:*\n\n";
+
+    let total = 0;
+
+    cart.forEach(item => {
+
+      const price =
+  
+        item.precoPromocional &&
+        item.precoPromocional < item.precoCheio
         ? item.precoPromocional
         : item.precoCheio;
 
-    const subtotal = price * item.quantity;
+      const subtotal = price * item.quantity;
 
-    total += subtotal;
+      total += subtotal;
+
+      message +=
+        `• ${item.quantity}x ${item.nome} — ${formatPrice(subtotal)}\n`;
+
+    });
 
     message +=
-      `• ${item.quantity}x ${item.nome} — ${formatPrice(subtotal)}\n`;
+      `\n💰 *Total do pedido: ${formatPrice(total)}*\n\n`;
 
-  });
+    message +=
+      "🤎 Aguardo a confirmação do pedido. Obrigada!";
 
-  message +=
-    `\n💰 *Total do pedido: ${formatPrice(total)}*`;
+    const url =
+      `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(message)}`;
 
-  message +=
-    "\n\n❤️ Aguardo a confirmação do pedido. Obrigada!";
+    window.open(url, "_blank");
 
-  const url =
-    `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(message)}`;
-
-  window.open(url, "_blank");
-}
     document.querySelectorAll(".category-btn").forEach(button => {
 
     button.addEventListener("click", () => {
