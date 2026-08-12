@@ -400,6 +400,89 @@
         font-size: 16px;
       }
     }
+
+    .interest-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(45, 39, 35, 0.45);
+  z-index: 3000;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.interest-modal.active {
+  display: flex;
+}
+
+.interest-box {
+  width: 100%;
+  max-width: 380px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 28px 22px 22px;
+  position: relative;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.18);
+}
+
+.interest-box h2 {
+  font-family: Georgia, serif;
+  font-size: 23px;
+  color: #403934;
+  margin-bottom: 10px;
+}
+
+#interestProductName {
+  font-weight: bold;
+  color: #665c56;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+.interest-text {
+  font-size: 13px;
+  color: #81756e;
+  line-height: 1.5;
+  margin-bottom: 18px;
+}
+
+.interest-close {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  border: none;
+  background: transparent;
+  font-size: 28px;
+  color: #81756e;
+  cursor: pointer;
+}
+
+.interest-input {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid #ddd3cc;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  outline: none;
+}
+
+.interest-input:focus {
+  border-color: #b99e8d;
+}
+
+.interest-send {
+  width: 100%;
+  border: none;
+  background: #25D366;
+  color: white;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
   </style>
 </head>
 
@@ -491,6 +574,50 @@
   </div>
 
 </aside>
+
+  <div id="interestModal" class="interest-modal">
+
+  <div class="interest-box">
+
+    <button
+      class="interest-close"
+      onclick="closeInterestModal()"
+    >
+      ×
+    </button>
+
+    <h2>Quero ser avisada ❤️</h2>
+
+    <p id="interestProductName"></p>
+
+    <p class="interest-text">
+      Deixe seus dados e avisaremos você quando esse produto voltar ao estoque.
+    </p>
+
+    <input
+      id="interestName"
+      class="interest-input"
+      type="text"
+      placeholder="Seu nome"
+    >
+
+    <input
+      id="interestPhone"
+      class="interest-input"
+      type="tel"
+      placeholder="Seu WhatsApp"
+    >
+
+    <button
+      class="interest-send"
+      onclick="sendInterest()"
+    >
+      📲 Quero ser avisada
+    </button>
+
+  </div>
+
+  </div>
 
 <script>
 
@@ -613,12 +740,25 @@
 
           </div>
 
-          <button
-            class="add-button"
-            onclick="addToCart('${product.id}')"
-          >
-            + Adicionar ao carrinho
-          </button>
+          ${
+  Number(product.estoque) > 0
+    ? `
+      <button
+        class="add-button"
+        onclick="addToCart('${product.id}')"
+      >
+        + Adicionar ao carrinho
+      </button>
+    `
+    : `
+      <button
+        class="add-button"
+        onclick="openInterestModal('${product.id}')"
+      >
+        🔔 Quero ser avisada
+      </button>
+    `
+          }
 
         </div>
       `;
@@ -861,6 +1001,80 @@
     window.open(url, "_blank");
 
   }
+
+  let selectedInterestProduct = null;
+
+function openInterestModal(id) {
+
+  const product = products.find(p => p.id === id);
+
+  if (!product) return;
+
+  selectedInterestProduct = product;
+
+  document.getElementById("interestProductName").textContent =
+    product.nome;
+
+  document.getElementById("interestName").value = "";
+  document.getElementById("interestPhone").value = "";
+
+  document
+    .getElementById("interestModal")
+    .classList.add("active");
+
+}
+
+function closeInterestModal() {
+
+  document
+    .getElementById("interestModal")
+    .classList.remove("active");
+
+  selectedInterestProduct = null;
+
+}
+
+function sendInterest() {
+
+  if (!selectedInterestProduct) return;
+
+  const name =
+    document.getElementById("interestName").value.trim();
+
+  const phone =
+    document.getElementById("interestPhone").value.trim();
+
+  if (!name) {
+
+    alert("Digite seu nome. ❤️");
+
+    return;
+
+  }
+
+  if (!phone) {
+
+    alert("Digite seu WhatsApp. ❤️");
+
+    return;
+
+  }
+
+  const message =
+    `🔔 *Interesse em produto esgotado*\n\n` +
+    `👤 Nome: ${name}\n` +
+    `📱 WhatsApp: ${phone}\n\n` +
+    `🛍️ Produto: ${selectedInterestProduct.nome}\n\n` +
+    `A cliente deseja ser avisada quando o produto voltar ao estoque.`;
+
+  const url =
+    `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(message)}`;
+
+  window.open(url, "_blank");
+
+  closeInterestModal();
+
+}
 
 
   document.querySelectorAll(".category-btn").forEach(button => {
