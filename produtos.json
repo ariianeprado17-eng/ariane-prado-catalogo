@@ -8,7 +8,8 @@
     "precoCheio": 389.00,
     "precoPromocional": 319.90,
     "imagem": "imagens/perfumes-femininos/scapin-245.jpg",
-    "disponivel": true
+    "disponivel": true,
+    "estoque":0
   },
   {
     "id": "floratta-red",
@@ -19,7 +20,8 @@
     "precoCheio": 174.90,
     "precoPromocional": 134.90,
     "imagem": "imagens/perfumes-femininos/floratta-red.jpg",
-    "disponivel": true
+    "disponivel": true,
+    "estoque":2
   },
   {
     "id": "ref-hid-cbem-nuvem",
@@ -30,7 +32,8 @@
     "precoCheio": 24.90,
     "precoPromocional": 19.90,
     "imagem": "imagens/cuidados-corporais/ref-hid-cbem-nuvem.jpg",
-    "disponivel": true
+    "disponivel": true.
+    "estoque":2
   },
   {
     "id": "ref-hid-cbem-deleite",
@@ -41,7 +44,8 @@
     "precoCheio": 24.90,
     "precoPromocional": 19.90,
     "imagem": "imagens/cuidados-corporais/ref-hid-cbem-deleite.jpg",
-    "disponivel": true
+    "disponivel": true,
+    "estoque":2
   },
   {
     "id": "ref-cond-botibaby",
@@ -52,8 +56,9 @@
     "precoCheio": 55.90,
     "precoPromocional": 44.90,
     "imagem": "imagens/infantis/ref-cond-botibaby.jpg",
-    "disponivel": true
-  },
+    "disponivel": true,
+    "estoque":1
+  }
   {
     "id": "cond-botibaby400ml",
     "nome": "Condicionador Suave BotiBaby 400ml",
@@ -63,10 +68,10 @@
     "precoCheio": 69.90,
     "precoPromocional": 59.90,
     "imagem": "imagens/infantis/cond-botibaby400ml.jpg",
-    "disponivel": true
-  },
-  {
-    "id": "ref-shp-botibaby",
+    "disponivel": true,
+    "estoque":1
+  }
+  { "id": "ref-shp-botibaby",
     "nome": "Refil Shampoo Suave BotiBaby 350ml",
     "marca": "Boticário",
     "categoria": "Infantis",
@@ -74,7 +79,8 @@
     "precoCheio": 53.90,
     "precoPromocional": 42.90,
     "imagem": "imagens/infantis/ref-shp-botibaby.jpg",
-    "disponivel": true
+    "disponivel": true,
+    "estoque":1
   },
   {
     "id": "shp-botibaby400ml",
@@ -85,7 +91,8 @@
     "precoCheio": 68.90,
     "precoPromocional": 58.90,
     "imagem": "imagens/infantis/shp-botibaby400ml.jpg",
-    "disponivel": true
+    "disponivel": true,
+    "estoque":1
   },
   {
     "id": "ref-sabliq-ameixa",
@@ -96,7 +103,8 @@
     "precoCheio": 47.90,
     "precoPromocional": 39.90,
     "imagem": "imagens/cuidados-corporais/ref-sabliq-ameixa.jpg",
-    "disponivel": true
+    "disponivel": true,
+    "estoque":1
   },
   {
     "id": "sabliq-ameixanegra250ml",
@@ -107,7 +115,8 @@
     "precoCheio": 59.90,
     "precoPromocional": 49.90,
     "imagem": "imagens/cuidados-corporais/sabliq-ameixanegra250ml.jpg",
-    "disponivel": true
+    "disponivel": true,
+    "estoque":1
   },
   {
     "id": "ref-hid-ameixa400ml",
@@ -118,7 +127,8 @@
     "precoCheio": 69.90,
     "precoPromocional": 49.90,
     "imagem": "imagens/cuidados-corporais/ref-hid-ameixa400ml.jpg",
-    "disponivel": true
+    "disponivel": true,
+    "estoque":1
   },
   {
     "id": "desod-aerosol-coffeeman",
@@ -129,6 +139,7 @@
     "precoCheio": 39.90,
     "precoPromocional": 24.90,
     "imagem": "imagens/cuidados-corporais/desod-aerosol-coffeeman.jpg",
-    "disponivel": true
+    "disponivel": true,
+    "estoque":2
   }
 ]
