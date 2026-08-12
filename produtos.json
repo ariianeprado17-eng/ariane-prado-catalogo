@@ -7,7 +7,128 @@
     "subcategoria": "Femininos",
     "precoCheio": 389.00,
     "precoPromocional": 319.90,
-    "imagem": "",
+    "imagem": "imagens/perfumes-femininos/scapin-245.jpg",
+    "disponivel": true
+  },
+  {
+    "id": "floratta-red",
+    "nome": "Floratta Red 75ml",
+    "marca": "Boticário",
+    "categoria": "Perfumes",
+    "subcategoria": "Femininos",
+    "precoCheio": 174.90,
+    "precoPromocional": 134.90,
+    "imagem": "imagens/perfumes-femininos/floratta-red.jpg",
+    "disponivel": true
+  },
+  {
+    "id": "ref-hid-cbem-nuvem",
+    "nome": "Refil Creme Hidratante para as Mãos Cuide-se Bem Nuvem 40g",
+    "marca": "Boticário",
+    "categoria": "Cuidados Corporais",
+    "subcategoria": null,
+    "precoCheio": 24.90,
+    "precoPromocional": 19.90,
+    "imagem": "imagens/cuidados-corporais/ref-hid-cbem-nuvem.jpg",
+    "disponivel": true
+  },
+  {
+    "id": "ref-hid-cbem-deleite",
+    "nome": "Refil Creme Hidratante para as Mãos Cuide-se Bem Deleite 40g",
+    "marca": "Boticário",
+    "categoria": "Cuidados Corporais",
+    "subcategoria": null,
+    "precoCheio": 24.90,
+    "precoPromocional": 19.90,
+    "imagem": "imagens/cuidados-corporais/ref-hid-cbem-deleite.jpg",
+    "disponivel": true
+  },
+  {
+    "id": "ref-cond-botibaby",
+    "nome": "Refil Condicionador Suave BotiBaby 350ml",
+    "marca": "Boticário",
+    "categoria": "Infantis",
+    "subcategoria": null,
+    "precoCheio": 55.90,
+    "precoPromocional": 44.90,
+    "imagem": "imagens/infantis/ref-cond-botibaby.jpg",
+    "disponivel": true
+  },
+  {
+    "id": "cond-botibaby400ml",
+    "nome": "Condicionador Suave BotiBaby 400ml",
+    "marca": "Boticário",
+    "categoria": "Infantis",
+    "subcategoria": null,
+    "precoCheio": 69.90,
+    "precoPromocional": 59.90,
+    "imagem": "imagens/infantis/cond-botibaby400ml.jpg",
+    "disponivel": true
+  },
+  {
+    "id": "ref-shp-botibaby",
+    "nome": "Refil Shampoo Suave BotiBaby 350ml",
+    "marca": "Boticário",
+    "categoria": "Infantis",
+    "subcategoria": null,
+    "precoCheio": 53.90,
+    "precoPromocional": 42.90,
+    "imagem": "imagens/infantis/ref-shp-botibaby.jpg",
+    "disponivel": true
+  },
+  {
+    "id": "shp-botibaby400ml",
+    "nome": "Shampoo Suave BotiBaby 400ml",
+    "marca": "Boticário",
+    "categoria": "Infantis",
+    "subcategoria": null,
+    "precoCheio": 68.90,
+    "precoPromocional": 58.90,
+    "imagem": "imagens/infantis/shp-botibaby400ml.jpg",
+    "disponivel": true
+  },
+  {
+    "id": "ref-sabliq-ameixa",
+    "nome": "Refil Sabonete Líquido Perfumado Nativa SPA Ameixa 200ml",
+    "marca": "Boticário",
+    "categoria": "Cuidados Corporais",
+    "subcategoria": null,
+    "precoCheio": 47.90,
+    "precoPromocional": 39.90,
+    "imagem": "imagens/cuidados-corporais/ref-sabliq-ameixa.jpg",
+    "disponivel": true
+  },
+  {
+    "id": "sabliq-ameixanegra250ml",
+    "nome": "Sabonete Líquido Perfumado Nativa SPA Ameixa Negra 250ml",
+    "marca": "Boticário",
+    "categoria": "Cuidados Corporais",
+    "subcategoria": null,
+    "precoCheio": 59.90,
+    "precoPromocional": 49.90,
+    "imagem": "imagens/cuidados-corporais/sabliq-ameixanegra250ml.jpg",
+    "disponivel": true
+  },
+  {
+    "id": "ref-hid-ameixa400ml",
+    "nome": "Refil Nativa SPA Loção Desodorante Hidratante Corporal Ameixa 400ml",
+    "marca": "Boticário",
+    "categoria": "Cuidados Corporais",
+    "subcategoria": null,
+    "precoCheio": 69.90,
+    "precoPromocional": 49.90,
+    "imagem": "imagens/cuidados-corporais/ref-hid-ameixa400ml.jpg",
+    "disponivel": true
+  },
+  {
+    "id": "desod-aerosol-coffeeman",
+    "nome": "Desodorante Antitranspirante Aerossol Coffee Man 125ml",
+    "marca": "Boticário",
+    "categoria": "Cuidados Corporais",
+    "subcategoria": null,
+    "precoCheio": 39.90,
+    "precoPromocional": 24.90,
+    "imagem": "imagens/cuidados-corporais/desod-aerosol-coffeeman.jpg",
     "disponivel": true
   }
 ]
