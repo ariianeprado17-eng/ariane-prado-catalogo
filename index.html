@@ -828,7 +828,7 @@
     }
 
     let message =
-  "🛍️ *Olá, Ariane! Gostaria de fazer este pedido:*\n\n";
+      "🛍️ *Olá, Ariane! Gostaria de fazer este pedido:*\n\n";
 
     let total = 0;
 
@@ -838,16 +838,16 @@
   
         item.precoPromocional &&
         item.precoPromocional < item.precoCheio
-        ? item.precoPromocional
-        : item.precoCheio;
+         ? item.precoPromocional
+         : item.precoCheio;
 
       const subtotal = price * item.quantity;
 
       total += subtotal;
 
       message +=
-        `• ${item.quantity}x ${item.nome} — ${formatPrice(subtotal)}\n`;
-
+        `• ${item.quantity}x ${item.nome} — $
+          {formatPrice(subtotal)}\n`;
     });
 
     message +=
