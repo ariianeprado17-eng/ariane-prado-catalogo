@@ -58,7 +58,7 @@
     "imagem": "imagens/infantis/ref-cond-botibaby.jpg",
     "disponivel": true,
     "estoque":1
-  }
+  },
   {
     "id": "cond-botibaby400ml",
     "nome": "Condicionador Suave BotiBaby 400ml",
@@ -70,7 +70,7 @@
     "imagem": "imagens/infantis/cond-botibaby400ml.jpg",
     "disponivel": true,
     "estoque":1
-  }
+  },
   { "id": "ref-shp-botibaby",
     "nome": "Refil Shampoo Suave BotiBaby 350ml",
     "marca": "Boticário",
