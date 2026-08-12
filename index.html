@@ -828,41 +828,40 @@
     }
 
     let message =
-      "Olá, Ariane! Gostaria de fazer este pedido:%0A%0A";
+  "🛍️ *Olá, Ariane! Gostaria de fazer este pedido:*\n\n";
 
     let total = 0;
 
     cart.forEach(item => {
 
       const price =
+  
         item.precoPromocional &&
         item.precoPromocional < item.precoCheio
-          ? item.precoPromocional
-          : item.precoCheio;
+        ? item.precoPromocional
+        : item.precoCheio;
 
       const subtotal = price * item.quantity;
 
       total += subtotal;
 
       message +=
-        `• ${item.quantity}x ${item.nome} — ${formatPrice(subtotal)}%0A`;
+        `• ${item.quantity}x ${item.nome} — ${formatPrice(subtotal)}\n`;
 
     });
 
     message +=
-      `%0A*Total: ${formatPrice(total)}*`;
+      `\n💰 *Total do pedido: ${formatPrice(total)}*\n\n`;
 
     message +=
-      "%0A%0AAguardo a confirmação da disponibilidade. ❤️";
+      "🤎 Aguardo a confirmação do pedido. Obrigada!";
 
     const url =
-      `https://wa.me/${WHATSAPP}?text=${message}`;
+      `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(message)}`;
 
     window.open(url, "_blank");
 
-  }
-
-  document.querySelectorAll(".category-btn").forEach(button => {
+    document.querySelectorAll(".category-btn").forEach(button => {
 
     button.addEventListener("click", () => {
 
